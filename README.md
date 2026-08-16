@@ -61,3 +61,4 @@ that went over a ₹500 daily limit. Swap in your own exported data anytime.
 | POST   | /api/expenses           | add an expense (JSON body)  |
 | DELETE | /api/expenses?id=5      | delete expense with id 5    |
 | GET    | /api/summary            | category totals + month total |
+
