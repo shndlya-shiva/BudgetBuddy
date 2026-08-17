@@ -1,0 +1,94 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #F1F3F2;
+  color: #16302B;
+  padding: 24px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header h1 { font-size: 1.6rem; }
+
+.month-total {
+  background: #16302B;
+  color: #F1F3F2;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: right;
+}
+
+.month-total .label { display: block; font-size: 0.75rem; opacity: 0.7; }
+.month-total .amount { font-size: 1.4rem; font-weight: 700; color: #E0972B; }
+
+main {
+  display: grid;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.card h2 { font-size: 1rem; margin-bottom: 14px; }
+
+#expenseForm { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+#expenseForm input, #expenseForm select {
+  padding: 10px;
+  border: 1px solid #D5DAD8;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+#expenseForm button {
+  grid-column: span 2;
+  background: #E0972B;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#expenseForm button:hover { background: #C7811E; }
+
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 8px; font-size: 0.9rem; border-bottom: 1px solid #EEE; }
+th { color: #6B7A76; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; }
+
+button { cursor: pointer; }
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 90px 1fr 80px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+.bar-track { background: #E7EBE9; border-radius: 6px; height: 10px; overflow: hidden; }
+.bar-fill { background: #E0972B; height: 100%; }
+
+@media (max-width: 500px) {
+  #expenseForm { grid-template-columns: 1fr; }
+  #expenseForm button { grid-column: span 1; }
+}
